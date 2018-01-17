@@ -1,3 +1,5 @@
+package pages;
+
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
@@ -10,7 +12,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class AddCollectionPage{
 
     public SelenideElement
-           photoComponent = $("[data-test='photo-component']"),
+            photoComponent = $("[data-test='photo-component']"),
             addCollectionButton = $(byTitle("Add to collection")),
             createNewCollectionButton = $(withText("Create a new collection")),
             titleField = $(byId("collection_title")),

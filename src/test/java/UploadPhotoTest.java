@@ -1,5 +1,7 @@
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import pages.LoginPage;
+import pages.UploadPhotoPage;
 
 import static com.codeborne.selenide.Selenide.open;
 
@@ -8,9 +10,8 @@ public class UploadPhotoTest extends BaseTest {
 
     @BeforeMethod
     public void loginRealUser() {
-    open("/login");
         LoginPage page = new LoginPage();
-        page.fillUserInfoField("izi_er@bk.ru", "");
+        page.fillUserInfoField("izi_er@bk.ru", "iop115a");
         page.agreeToLoginButton();
     }
 

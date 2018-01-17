@@ -1,3 +1,5 @@
+package pages;
+
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
@@ -37,7 +39,7 @@ public class UploadPhotoPage{
 
     public void uploadFilePhoto() {
         //загрузка самого файла на сайт
-        File file = new File("src/test/111.jpg");
+        File file = new File("./src/test/resources/111.jpg");
         uploadFile.uploadFile(file);
     }
     
@@ -71,9 +73,9 @@ public class UploadPhotoPage{
         }
 
         public void checkThatPhotoIsUpload(String upload) {
-        successUploadText.shouldBe(visible).shouldHave(text(upload));
-        open("/@izyaz");
-        photoComponent.click();
+            successUploadText.shouldHave(text(upload));
+            open("/@izyaz");
+            photoComponent.click();
         }
 
 }

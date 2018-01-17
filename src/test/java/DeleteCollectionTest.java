@@ -1,6 +1,10 @@
 import com.codeborne.selenide.Configuration;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import pages.AddCollectionPage;
+import pages.DeleteCollectionPage;
+import pages.LandingPage;
+import pages.LoginPage;
 
 import static com.codeborne.selenide.Selenide.open;
 
@@ -8,18 +12,15 @@ public class DeleteCollectionTest extends BaseTest {
 
     @BeforeMethod
     public void createBeforeDeleting() {
-        open("/login");
-        LoginPage page = new LoginPage();
-        page.fillUserInfoField("izi_er@bk.ru", "");
-        page.agreeToLoginButton();
-        open("/@izyaz");
-        AddCollectionPage newcollection = new AddCollectionPage();
+        LoginPage loginPage = new LoginPage();
+        loginPage.fillUserInfoField("izi_er@bk.ru", "iop115a");
+        LandingPage landingPage = loginPage.agreeToLoginButton();
+        AddCollectionPage newcollection = landingPage.clickOnProfileLink();
         newcollection.makeAddCollectionButtonVisible();
         newcollection.clickOnNewCreateCollectionButton();
         newcollection.fillCollectionTitleField("Test collection");
         newcollection.clickOnCreateCollectionButton();
         open("/@izyaz/collections");
-        Configuration.timeout=1000;
     }
 
 

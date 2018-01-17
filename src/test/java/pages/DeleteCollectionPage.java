@@ -1,3 +1,5 @@
+package pages;
+
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
@@ -8,7 +10,7 @@ import static com.codeborne.selenide.Selectors.byTitle;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class DeleteCollectionPage{
+public class DeleteCollectionPage {
 
     public SelenideElement
             titleCollection = $(byText("Test collection")),
@@ -17,23 +19,26 @@ public class DeleteCollectionPage{
             homeButton = $(byTitle("Home — Unsplash")),
             deleteButton = $(byText("Delete"));
 
+    public DeleteCollectionPage() {
+
+    }
 
     public void clickOnTitleCollectionName(){
         //найти коллекцию
-        titleCollection.shouldBe(Condition.visible).click();
+        titleCollection.click();
     }
 
     public void clickOnEditCollectionButton() {
         //перейти на страницу редактирования
-        editCollectionButton.waitUntil(Condition.visible, 9000).click();
+        editCollectionButton.click();
     }
 
     public void clickOnDeleteCollectionButton(){
-        deleteCollectionButton.waitUntil(Condition.visible, 2000).click();
+        deleteCollectionButton.click();
     }
 
     public void clickOnAgreeToDeleteButton(){
-        deleteButton.waitUntil(Condition.visible, 5000).click();
+        deleteButton.click();
     }
 
     public void checkThatCollectionIsDeleted(String name) {

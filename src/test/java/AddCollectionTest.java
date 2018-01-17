@@ -1,5 +1,7 @@
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import pages.AddCollectionPage;
+import pages.LoginPage;
 
 import static com.codeborne.selenide.Selenide.open;
 
@@ -7,11 +9,9 @@ public class AddCollectionTest extends BaseTest {
 
     @BeforeMethod
     public void loginRealUser() {
-        open("/login");
         LoginPage page = new LoginPage();
-        page.fillUserInfoField("izi_er@bk.ru", "");
+        page.fillUserInfoField("izi_er@bk.ru", "iop115a");
         page.agreeToLoginButton();
-        open("/@izyaz");
     }
 
     @Test
