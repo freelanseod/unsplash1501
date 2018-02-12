@@ -1,0 +1,35 @@
+# IntelliJ project files
+.idea
+.gradle
+build
+*.iml
+.DS_Store
+out
+gen
+.allure
+allure-results
+src/test/resources/reportportal.properties
+
+### Java template
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+caches/
+daemon/
+native/
+local.properties
