@@ -1,0 +1,12 @@
+<application>
+  <component name="libraryTable">
+    <library name="selenide-4.8">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/Downloads/selenide-4.8.jar!/" />
+        <root url="jar://$USER_HOME$/Downloads/selenium-server-standalone-3.7.1.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+  </component>
+</application>
