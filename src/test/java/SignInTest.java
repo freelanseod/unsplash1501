@@ -31,7 +31,7 @@ public class SignInTest extends BaseTest {
 
     @Test
     public void userNotFound() {
-        loginPage.fillUserInfoField("16@list.ru", "123456");
+        loginPage.fillUserInfoField("16@list.ru", "123456789");
         loginPage.clickonLoginButton();
         loginPage.checkThatUserNotLogin();
 
